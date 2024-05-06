@@ -1,99 +1,66 @@
 package org.shopping;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.shopping.pages.ShoppingMainPage;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 import java.util.List;
 
-public class ShoppingTest {
-    private final static String PRODUCT_NAME_ELEMENT = "//div[contains(@class, \"csvtPz\")]";
-    private final static String PRODUCT_NAME_ATTR = "alt";
-
-    private WebDriver driver;
+public class ShoppingTest extends BaseTest {
+    private ShoppingMainPage page;
 
     @BeforeTest
-    public void setup() {
-        System.setProperty(Constants.WEB_DRIVER_NAME, Constants.WEB_DRIVER_PATH);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+    @Override
+    public void setUp() {
+        super.setUp();
+
+        page = new ShoppingMainPage(driver);
     }
 
     @BeforeMethod
     public void openSite() {
-        driver.get(Constants.URL);
+        page.openUrl();
     }
 
     @Test
     public void addToCartTest() {
-        WebElement firstProduct = driver.findElements(By.xpath(PRODUCT_NAME_ELEMENT)).get(0);
-        String firstProductName = firstProduct.getAttribute(PRODUCT_NAME_ATTR);
-        driver.findElements(By.cssSelector("button.jCsgpZ")).get(0).click();
-
-        String cartFirstProductName = driver.findElement(By.cssSelector("div.hDmOrM img.jMMQhp")).getAttribute("alt");
+        String firstProductName = page.getProductsNames().get(0);
+        page.addFirstProductToCart();
+        String cartFirstProductName = page.getCartProductsNames().get(0);
 
         Assert.assertEquals(cartFirstProductName, firstProductName);
     }
 
     @Test
-    public void addAllToCartTest() throws InterruptedException {
-        List<String> allProductsNames = driver.findElements(By.xpath(PRODUCT_NAME_ELEMENT))
-                .stream().map((p) -> p.getAttribute(PRODUCT_NAME_ATTR)).toList();
+    public void addAllToCartTest() {
+        List<String> allProductsNames = page.getProductsNames();
+        page.addAllProductsToCart();
 
-        WebElement closeButton = driver.findElement(By.cssSelector("button.gFkyvN"));
-
-        for (WebElement button : driver.findElements(By.cssSelector("button.jCsgpZ"))) {
-            button.click();
-            Thread.sleep(350);
-            closeButton.click();
-            Thread.sleep(350);
-        }
-
-        driver.findElement(By.cssSelector("div.fMOJZp button")).click();
-
-        List<String> cartAllProductsNames = driver.findElements(By.cssSelector("div.hDmOrM img.jMMQhp"))
-                .stream().map((p) -> p.getAttribute("alt")).toList();
+        List<String> cartAllProductsNames = page.getCartProductsNames();
 
         Assert.assertEquals(cartAllProductsNames, allProductsNames);
     }
 
     @Test
     public void sizeFilter() throws InterruptedException {
-        List<WebElement> allProducts = driver.findElements(By.xpath(PRODUCT_NAME_ELEMENT));
-
-        driver.findElements(By.cssSelector(".hcyKTa")).get(0).click();
+        List<String> allProductsNames = page.getProductsNames();
+        page.chooseSize(0);
         Thread.sleep(350);
-
-        List<WebElement> allFilteredProducts = driver.findElements(By.xpath(PRODUCT_NAME_ELEMENT));
-        Assert.assertTrue(allProducts.size() > allFilteredProducts.size(), "All: " + allProducts.size() + ", filtered: " + allFilteredProducts.size());
+        List<String> filteredProducts = page.getProductsNames();
+        Assert.assertTrue(allProductsNames.size() > filteredProducts.size(), "All: " + allProductsNames.size() + ", filtered: " + filteredProducts.size());
     }
 
     @Test
     public void sizeFilterParseNumber() throws InterruptedException {
-        driver.findElements(By.xpath(PRODUCT_NAME_ELEMENT));
-
-        String countText = driver.findElement(By.cssSelector(".iliWeY p")).getText();
-        int allProductsNumber = Integer.parseInt(countText.substring(0, countText.indexOf(" ")));
-
-        driver.findElements(By.cssSelector(".hcyKTa")).get(0).click();
-        Thread.sleep(500);
-
-        String filteredCountText = driver.findElement(By.cssSelector(".iliWeY p")).getText();
-        int filteredProductsNumber = Integer.parseInt(filteredCountText.substring(0, filteredCountText.indexOf(" ")));
+        page.getProductsNames(); // to wait when the products are loaded
+        int allProductsNumber = page.getProductsTotalFromText();
+        page.chooseSize(0);
+        Thread.sleep(350);
+        int filteredProductsNumber = page.getProductsTotalFromText();
 
         Assert.assertTrue(allProductsNumber > filteredProductsNumber, "All: " + allProductsNumber + ", filtered: " + filteredProductsNumber);
     }
 
-    @AfterTest
-    public void close() {
-        driver.quit();
-    }
 }
