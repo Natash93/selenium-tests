@@ -1,0 +1,68 @@
+2024-05-14 16:09:51,351 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================
+2024-05-14 16:09:51,358 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] Test addAllToCartTest started
+2024-05-14 16:09:53,242 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Loaded url:https://react-shopping-cart-67954.firebaseapp.com/
+2024-05-14 16:09:53,700 INFO o.s.l.TestListener [TestNG-test-exampletest1-3] =========================================================
+2024-05-14 16:09:53,703 INFO o.s.l.TestListener [TestNG-test-exampletest1-3] Test sizeFilter started
+2024-05-14 16:09:54,007 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:09:55,456 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-3] Loaded url:https://react-shopping-cart-67954.firebaseapp.com/
+2024-05-14 16:09:56,557 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-3] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:09:56,988 INFO o.s.l.TestListener [TestNG-test-exampletest1-2] =========================================================
+2024-05-14 16:09:56,989 INFO o.s.l.TestListener [TestNG-test-exampletest1-2] Test addToCartTest started
+2024-05-14 16:09:57,376 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-3] Found by By.cssSelector: .hcyKTa found elements: 7
+2024-05-14 16:09:57,487 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-3] div was clicked
+2024-05-14 16:09:57,780 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.cssSelector: button.jCsgpZ found elements: 16
+2024-05-14 16:09:58,367 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-3] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:09:58,664 INFO o.s.l.TestListener [TestNG-test-exampletest1-3] =========================================================
+2024-05-14 16:09:58,668 INFO o.s.l.TestListener [TestNG-test-exampletest1-3] Test sizeFilter failed
+2024-05-14 16:09:58,671 INFO o.s.l.TestListener [TestNG-test-exampletest1-3] =========================================================
+2024-05-14 16:09:59,016 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.cssSelector: div.hDmOrM img.jMMQhp found elements: 16
+2024-05-14 16:09:59,401 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] Test addAllToCartTest success
+2024-05-14 16:09:59,402 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================
+2024-05-14 16:09:59,679 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Loaded url:https://react-shopping-cart-67954.firebaseapp.com/
+2024-05-14 16:10:00,013 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:10:00,521 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Found by By.cssSelector: button.jCsgpZ found elements: 16
+2024-05-14 16:10:00,623 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Found by By.cssSelector: div.hDmOrM img.jMMQhp found elements: 1
+2024-05-14 16:10:00,637 INFO o.s.l.TestListener [TestNG-test-exampletest1-2] Test addToCartTest success
+2024-05-14 16:10:00,637 INFO o.s.l.TestListener [TestNG-test-exampletest1-2] =========================================================
+2024-05-14 16:10:02,669 DEBUG o.a.p.o.o.PackageRelationshipCollection [TestNG-test-exampletest1-1] Parsing relationship: /xl/_rels/workbook.xml.rels
+2024-05-14 16:10:02,674 DEBUG o.a.p.o.o.PackageRelationshipCollection [TestNG-test-exampletest1-1] Parsing relationship: /_rels/.rels
+2024-05-14 16:10:04,687 INFO o.s.l.TestListener [TestNG-test-exampletest1-2] =========================================================
+2024-05-14 16:10:04,688 INFO o.s.l.TestListener [TestNG-test-exampletest1-2] Test sizeFilterParseNumber started
+2024-05-14 16:10:06,100 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Loaded url:https://react-shopping-cart-67954.firebaseapp.com/
+2024-05-14 16:10:06,853 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:10:07,137 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================
+2024-05-14 16:10:07,138 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] Test sizeFilterBySizeName started
+2024-05-14 16:10:07,580 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Found by By.cssSelector: .iliWeY p found elements: true
+2024-05-14 16:10:07,884 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Get text from p: '16 Product(s) found'
+2024-05-14 16:10:08,005 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Found by By.cssSelector: .hcyKTa found elements: 7
+2024-05-14 16:10:08,215 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Loaded url:https://react-shopping-cart-67954.firebaseapp.com/
+2024-05-14 16:10:08,543 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] div was clicked
+2024-05-14 16:10:08,550 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:10:08,994 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.cssSelector: .hcyKTa found elements: 7
+2024-05-14 16:10:09,089 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Found by By.cssSelector: .iliWeY p found elements: true
+2024-05-14 16:10:09,133 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-2] Get text from p: '1 Product(s) found'
+2024-05-14 16:10:09,137 INFO o.s.l.TestListener [TestNG-test-exampletest1-2] Test sizeFilterParseNumber success
+2024-05-14 16:10:09,138 INFO o.s.l.TestListener [TestNG-test-exampletest1-2] =========================================================
+2024-05-14 16:10:09,593 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] div was clicked
+2024-05-14 16:10:10,337 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:10:10,698 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================
+2024-05-14 16:10:10,699 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] Test sizeFilterBySizeName failed
+2024-05-14 16:10:10,699 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================
+2024-05-14 16:10:13,544 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================
+2024-05-14 16:10:13,544 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] Test sizeFilterBySizeName started
+2024-05-14 16:10:14,495 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Loaded url:https://react-shopping-cart-67954.firebaseapp.com/
+2024-05-14 16:10:14,852 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:10:15,081 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.cssSelector: .hcyKTa found elements: 7
+2024-05-14 16:10:15,512 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] div was clicked
+2024-05-14 16:10:16,133 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 1
+2024-05-14 16:10:16,144 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] Test sizeFilterBySizeName success
+2024-05-14 16:10:16,144 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================
+2024-05-14 16:10:17,944 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================
+2024-05-14 16:10:17,945 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] Test sizeFilterBySizeName started
+2024-05-14 16:10:18,885 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Loaded url:https://react-shopping-cart-67954.firebaseapp.com/
+2024-05-14 16:10:19,235 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 16
+2024-05-14 16:10:19,518 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.cssSelector: .hcyKTa found elements: 7
+2024-05-14 16:10:19,836 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] div was clicked
+2024-05-14 16:10:20,502 INFO o.s.l.ElementActionListener [TestNG-test-exampletest1-1] Found by By.xpath: //div[contains(@class, "csvtPz")] found elements: 10
+2024-05-14 16:10:20,587 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] Test sizeFilterBySizeName success
+2024-05-14 16:10:20,588 INFO o.s.l.TestListener [TestNG-test-exampletest1-1] =========================================================

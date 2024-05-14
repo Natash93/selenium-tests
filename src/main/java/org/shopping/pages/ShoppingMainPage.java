@@ -1,5 +1,6 @@
 package org.shopping.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ShoppingMainPage extends BasePage {
 
@@ -59,6 +61,13 @@ public class ShoppingMainPage extends BasePage {
 
     public void chooseSize(int index) {
         sizeFilters.get(index).click();
+    }
+
+    public void chooseSizeByName(String sizeName) {
+        WebElement sizeFilter = sizeFilters.stream().filter((element) ->
+                sizeName.equals(element.findElement(By.cssSelector("input")).getAttribute("value"))
+        ).toList().get(0);
+        sizeFilter.click();
     }
 
     public int getProductsTotalFromText() {
